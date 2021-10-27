@@ -1,0 +1,9 @@
+function snext = Rinv(s)
+% simulate clockwise rotation of Front face of Rubik's cube
+
+    snext = s;
+    snext(:,2) = s([3 4 5 6 7 8 1 2 9],2);
+    snext([1 8 7],3) = s([5 4 3],6); % update R side
+    snext([5 4 3],1) = s([5 4 3],5);
+    snext([5 4 3],5) = s([1 8 7],3);
+    snext([5 4 3],6) = s([5 4 3],1);
