@@ -1,5 +1,14 @@
 function state = doAlgorithm(state, alg)
 % perform a particular algorithm on the Rubik's cube
+% For notation guide, refer to https://jperm.net/3x3/moves
+% Specific naming conventions used here:
+%           F = Clockwise Front Face Turn
+%           Fi = Counterclockwise Front Face Turn
+%           F2 = Double Front Face Turn
+%           Fw = Clockwise Wide Front Face Turn (front + middle layers)
+%           Fv = Counterclockwise Wide Front Face Turn (front + middle)
+%
+
 
 N = length(alg);
 i = 1; % index of where in the string we are

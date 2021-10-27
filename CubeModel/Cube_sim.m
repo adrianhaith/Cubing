@@ -17,9 +17,10 @@
 %                 ---------
 % 
 % Face color is the 9th element of the vector
-
- 
+% 
 clear all
+addpath Moves
+
 
 o = ones(9,1);
 %Nstates = 48;
@@ -51,6 +52,5 @@ Rot_inv = inv(Rot);
 % implement an algorithm
 alg = 'FwF';
 state = init_state;
-state = doAlgorithm(state,alg);
 state = doAlgorithm(state,alg);
 
